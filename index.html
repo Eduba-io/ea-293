@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>A read on where AI fits in Sparrow's stack</title>
+<meta name="description" content="You closed the October tranche to push PRO into US hospitals, and the UW Medical Center study is doing a lot of the clinical lifting. A hypothesis on where the consumer-and-clinician split costs product velocity." />
+<meta name="robots" content="noindex" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<div data-eduba="banner" style="background:#0a0a0a;color:#f5f5f5;padding:10px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:13px;letter-spacing:0.01em;border-bottom:1px solid #1f1f1f;position:relative;z-index:1000;">
+  <a href="https://eduba.io" target="_blank" rel="noopener" style="color:#f5f5f5;text-decoration:none;font-weight:800;font-size:17px;letter-spacing:-0.02em;line-height:1;">eduba</a>
+  <span style="opacity:0.88;">Prepared by Eduba for Sparrow BioAcoustics &mdash; Emerge Americas 2026</span>
+</div>
+
+
+<header class="top-rail" role="banner">
+  <div class="top-rail__inner">
+    <div class="brand">
+      <img src="logo.png" alt="Stethophone by Sparrow BioAcoustics" />
+    </div>
+    <span class="prepared-tag" aria-label="Prepared for Sparrow BioAcoustics">
+      <span class="dot" aria-hidden="true"></span>
+      Prepared for Sparrow BioAcoustics
+    </span>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero" aria-labelledby="hero-h1">
+    <div class="container">
+      <span class="hero__kicker">
+        <span class="pulse" aria-hidden="true"></span>
+        eMerge Americas Miami 2026 &middot; Booth 915b
+      </span>
+      <h1 id="hero-h1">
+        A read on where AI <span class="ital">actually</span> fits in Sparrow's stack, and where it doesn't.
+      </h1>
+      <p class="hero__lede">
+        The October tranche closed with a clear use of funds: US hospital deployment, a stronger PRO motion, more evidence at academic centres like UW Medical. This page is a short hypothesis about the layer that sits above the cleared model, written for the Sparrow BioAcoustics team.
+      </p>
+      <div class="hero__cta-row">
+        <a class="btn btn--primary" href="https://calendly.com/thecro-eduba/30min" target="_blank" rel="noopener">
+          Book 30 minutes with Matt
+        </a>
+        <a class="btn btn--ghost" href="#read">Read the hypothesis</a>
+      </div>
+      <div class="hero__trust" role="list" aria-label="Context">
+        <span role="listitem"><span class="bar" aria-hidden="true"></span>FDA-cleared cardiac AI</span>
+        <span role="listitem"><span class="bar" aria-hidden="true"></span>Health Canada Class II</span>
+        <span role="listitem"><span class="bar" aria-hidden="true"></span>UW Medical Center study on record</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- THE READ -->
+  <section class="read" id="read" aria-labelledby="read-h2">
+    <div class="container">
+      <span class="eyebrow">The read</span>
+      <h2 class="section-title" id="read-h2">The cleared model is the easy part. The orchestration around it is not.</h2>
+      <div class="read__grid">
+        <div>
+          <p>
+            The UW Medical Center study on valvular disease and atrial fibrillation is doing real work for the clinical story. So is Dr. McCabe on the record. So are the 40,000 users who have already made the Stethophone corpus bigger than most audio ML shops will ever build.
+          </p>
+          <p>
+            Two questions sit underneath that. First, which parts of what Sparrow ships are genuinely AI problems, and which are deterministic code dressed in an AI wrapper. Second, which parts of the product organisation are re-deciding the consumer-and-clinician split every sprint because nobody has drawn the architectural line once.
+          </p>
+          <p>
+            Neither question is about the bioacoustic model. Both are about what sits around it.
+          </p>
+        </div>
+        <aside class="read__aside" aria-label="Quick orientation">
+          <p><strong>Who this is for.</strong> the Head of AI and Data Science, the CPO, with executive sponsorship.</p>
+          <p><strong>What it is.</strong> A thirty-minute conversation about the decision layer above the regulated model. Scoped, written, auditable.</p>
+          <p><strong>Out of scope.</strong> Anything that touches the cleared model, the PHI plane, or your FDA change-control surface.</p>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- FRAMEWORK -->
+  <section class="framework" aria-labelledby="fw-h2">
+    <div class="container">
+      <span class="eyebrow">The 60 / 30 / 10 read</span>
+      <h2 class="section-title" id="fw-h2">Applied to Sparrow.</h2>
+      <p class="section-lede">
+        Most organisations automate the wrong things. The discipline is deciding which layer each problem belongs on. In most stacks, 60 percent of the work is traditional code and database, 30 percent is rule-based logic, 10 percent is actually AI. Sparrow is the unusual case where the cleared bioacoustic model is genuinely the AI tier and should stay there, protected from scope creep, with strict change-control discipline.
+      </p>
+
+      <div class="tiers" role="list">
+        <div class="tier" role="listitem">
+          <div class="tier__pct">60<small style="font-size:16px;">%</small><span>Code &amp; data</span></div>
+          <div class="tier__body">
+            <h3>The plumbing.</h3>
+            <p>Handoff between a consumer flag and a clinician inbox. Recording provenance. EHR-friendly outputs. Not AI. Traditional software, done carefully.</p>
+          </div>
+        </div>
+
+        <div class="tier tier--highlight" role="listitem">
+          <div class="tier__pct">30<small style="font-size:16px;">%</small><span>Rule-based</span></div>
+          <div class="tier__body">
+            <h3>The policy layer.</h3>
+            <p>When does a retrain live inside the existing clearance. When does it trigger a fresh submission. Who signs. This is where most clinical-AI companies lose months.</p>
+          </div>
+        </div>
+
+        <div class="tier" role="listitem">
+          <div class="tier__pct">10<small style="font-size:16px;">%</small><span>Real AI</span></div>
+          <div class="tier__body">
+            <h3>The cleared model.</h3>
+            <p>The bioacoustic pipeline Sparrow already owns. This tier should stay narrow, defended, and boring in the best sense. Out of scope for any engagement.</p>
+          </div>
+        </div>
+      </div>
+
+      <p class="section-lede" style="margin-top:32px;">
+        The useful work sits in the 60 and the 30. Who routes a consumer flag into a clinician workflow. How a model-update decision moves from the AI team through regulatory review to release. Where the line is drawn between consumer telemetry and PRO-grade clinical data. All of it is the orchestration layer around the AI, and it is where a short written framework beats a long engineering sprint.
+      </p>
+    </div>
+  </section>
+
+  <!-- CASE -->
+  <section class="case" aria-labelledby="case-h2">
+    <div class="container">
+      <div class="case__body">
+        <span class="eyebrow">The case</span>
+        <h2 class="section-title" id="case-h2">Feeld: product company, CTO buyer, same shape of problem.</h2>
+        <p>
+          Feeld engaged Eduba for a scoped sprint covering workshop, advisory calls, Organisational Context Architecture, and a Strategic Operations Framework. The buyer was the CTO, trying to operationalise AI inside the org without burning the team out on ad-hoc decisions. The deliverable was a written framework for which decisions live where, who makes them, and how they get audited.
+        </p>
+        <p>
+          The same sprint applied to Sparrow would start with the consumer-PRO split and end with a decision map the clinical, regulatory, and product leads all share.
+        </p>
+      </div>
+
+      <div class="case__stats" aria-label="Adjacent credibility">
+        <div class="stat">
+          <div class="stat__label">Training at scale</div>
+          <div class="stat__value">1,500+ people trained across enterprise engagements since May 2025 at partners including Pacific Life and Colgate-Palmolive. 95% still using the tools 30 days after.</div>
+        </div>
+        <div class="stat">
+          <div class="stat__label">Professional services audience</div>
+          <div class="stat__value">KPMG UK, one of the Big Four. 40+ executives trained in a regulated-industry, leadership-level program.</div>
+        </div>
+        <div class="stat">
+          <div class="stat__label">Academic grounding</div>
+          <div class="stat__value">Published in ACM TiiS (Interpretable Context Methodology) and arXiv (Ethics Engine). MSc Future Governance, University of Edinburgh.</div>
+        </div>
+        <div class="stat">
+          <div class="stat__label">Veteran-owned</div>
+          <div class="stat__value">Eight years Marine Corps, cryptographic systems and F-35 and F-18 avionics. Context for regulated and government-adjacent buyers.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GOVERNANCE -->
+  <section class="gov" aria-labelledby="gov-h2">
+    <div class="container">
+      <span class="eyebrow">The paper</span>
+      <h2 class="section-title" id="gov-h2">Ethics Engine: the governance reading for a regulated clinical workflow.</h2>
+
+      <div class="gov__card">
+        <div>
+          <h3>Ethics Engine</h3>
+          <p>
+            Ethics Engine is a psychometric assessment tool for evaluating ideological and moral patterns in LLMs. It is the right citation for a company shipping FDA-cleared AI into a clinical workflow, because the paper speaks to the governance buyer rather than the model engineer.
+          </p>
+          <div class="gov__links">
+            <a href="https://arxiv.org/abs/2510.11742" target="_blank" rel="noopener">arXiv 2510.11742</a>
+            <a href="https://github.com/RinDig/AuditEngine" target="_blank" rel="noopener">github.com/RinDig/AuditEngine</a>
+          </div>
+        </div>
+        <div>
+          <p style="font-size:14.5px; color: var(--navy);">
+            Secondary reading: the Interpretable Context Methodology paper (ACM TiiS) for the documentation and context-architecture conversation that sits under any Sparrow engagement.
+          </p>
+          <div class="gov__links">
+            <a href="https://github.com/RinDig/Interpretable-Context-Methodology-ICM-" target="_blank" rel="noopener">ICM on GitHub</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PARTNER -->
+  <section class="partner" aria-labelledby="partner-h2">
+    <div class="container">
+      <span class="eyebrow">Where NLP Logix fits</span>
+      <h2 class="section-title" id="partner-h2" style="font-size:22px;">The pipeline work sits a layer below.</h2>
+      <p>
+        NLP Logix has been in machine learning since 2011 and runs over 150 data scientists. Eduba partners with NLP Logix for work that sits below the orchestration layer: the MLOps pipeline, drift-monitoring tooling, and data-platform work a US rollout will need at 10x the current user base. The decision architecture above that pipeline is where Eduba leads. That sequence matters, and in this case it runs Eduba first.
+      </p>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta" aria-labelledby="cta-h2">
+    <div class="container">
+      <div class="cta__card">
+        <span class="eyebrow" style="color: var(--mint);">Next step</span>
+        <h2 id="cta-h2">30 minutes with Matt Creamer. Calendar below.</h2>
+        <p>
+          Bring one decision your team is making for the third time because nobody has drawn the line on paper. If there is nothing useful to say after ten minutes, we end the call at ten.
+        </p>
+        <div class="cta__row">
+          <a class="btn btn--primary" href="https://calendly.com/thecro-eduba/30min" target="_blank" rel="noopener">
+            Book on Matt's calendar
+          </a>
+          <a class="btn btn--ghost" href="mailto:theceo@eduba.io?subject=Sparrow%20BioAcoustics%20%2F%20Stethophone">
+            Email instead
+          </a>
+        </div>
+        <p class="cta__contact">
+          Direct: <a href="https://calendly.com/thecro-eduba/30min" target="_blank" rel="noopener">calendly.com/thecro-eduba/30min</a> &middot;
+          <a href="mailto:theceo@eduba.io">theceo@eduba.io</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <div>Prepared by Eduba. <a href="https://eduba.io" target="_blank" rel="noopener">eduba.io</a> &middot; <a href="https://eduba.io/works" target="_blank" rel="noopener">More case studies</a></div>
+    <div>For Sparrow BioAcoustics &middot; Booth 915b &middot; eMerge Americas Miami 2026</div>
+  </div>
+</footer>
+
+<footer data-eduba="footer" style="background:#0a0a0a;color:#dcdcdc;padding:36px 20px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:13px;line-height:1.6;border-top:1px solid #1f1f1f;margin-top:48px;">
+  <div style="max-width:1040px;margin:0 auto;">
+    <div style="display:flex;flex-wrap:wrap;gap:28px;justify-content:space-between;align-items:flex-start;">
+      <div style="min-width:240px;flex:1;">
+        <div style="margin-bottom:6px;"><a href="https://eduba.io" target="_blank" rel="noopener" style="color:#ffffff;text-decoration:none;font-weight:800;font-size:20px;letter-spacing:-0.02em;">eduba</a></div>
+        <div style="opacity:0.85;margin-bottom:4px;">Van Clief Media LLC, dba Eduba</div>
+        <div style="opacity:0.7;">Veteran-owned AI consulting and training firm</div>
+      </div>
+      <div style="min-width:220px;flex:1;">
+        <div style="color:#ffffff;font-weight:600;margin-bottom:2px;">Matt Creamer, CRO</div>
+        <div style="margin-bottom:10px;"><a href="mailto:thecro@eduba.io" style="color:#dcdcdc;text-decoration:underline;">thecro@eduba.io</a></div>
+        <div style="opacity:0.85;">Founder: Jake Van Clief</div>
+      </div>
+      <div style="min-width:180px;flex:1;">
+        <div style="margin-bottom:4px;"><a href="https://eduba.io" target="_blank" rel="noopener" style="color:#dcdcdc;text-decoration:underline;">eduba.io</a></div>
+        <div style="opacity:0.85;">Palm Coast, FL</div>
+      </div>
+    </div>
+    <div style="margin-top:24px;padding-top:16px;border-top:1px solid #1f1f1f;opacity:0.62;font-size:12px;line-height:1.55;">
+      This site was custom-built by Eduba as a conference pitch. It is not affiliated with or operated by Sparrow BioAcoustics.
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
